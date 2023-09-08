@@ -38,6 +38,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--main-font);
+    text-decoration: none;
 }
 
 
@@ -61,39 +63,88 @@
         position: absolute;
         top: 0;
 
-        background-color: red;
+        background: url(assets/images/bg-sidebar-mobile.svg);
+        background-size: cover;
+        background-position: bottom;
     }
 
     .rightAppContainer {
         width: 100%;
-        height: 75%;
+        height: 100%;
         background-color: var(--Magnolia);
+    }
+
+    .title {
+        color: var(--marine-blue);
+    }
+
+    .stepDescription {
+        font-size: var(--font-size-paragraph);
+        color: var(--Cool-gray);
+        margin: 7px 0px 30px 0px;
+
+        /* width: 240px;
+        line-height: 23px; */
+        /* background-color: red; */
     }
 
     .stepContainer {
         width: 93%;
-        height: 55%;  /* remover o height quando o conteudo for inserido dentro */
+        /* height: 55%;   */
         position: absolute;
-        top: 100px;
+        top: 95px;
         left: 3.5%;
-
-        background-color: green;
+        padding: 20px; 
+        border-radius: 15px;
+        background-color: var(--White);
+        box-shadow: 5px 5px 30px 5px #0000000f;
     }
 
+    /* INICIO NAVIGATION */
     .navigationContainer{
         width: 100%;
-        height: 15%;
+        height: 11%;
         position: absolute;
         bottom: 0;
 
-        background-color: blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: var(--White);
     }
+
+    .nextBtn {
+        padding: 13px 19px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--marine-blue);
+        margin-right: 15px;
+    }
+
+    .backBtn {
+        text-decoration: none;
+        color: var(--Cool-gray);
+        font-weight: 700;
+        margin-left: 15px;
+    }
+
+    .backBtn:hover {
+        color: var(--marine-blue);
+    }
+
+    .link .nextBtn {
+        text-decoration: none;
+        color: var(--White);
+    }
+    /* FIM NAVIGATION */
 }
 
 
 /* inicio desktop */
 @media screen and (min-width: 850px) {
-    /* container dos steps */
+    /* inicio container dos steps */
     .appContainer {
         width: 850px;
         height: 520px;
@@ -113,25 +164,65 @@
         height: 100%;
         border-radius: 10px;
 
-        background-color: red;
+        background: url(assets/images/bg-sidebar-desktop.svg);
+        background-size: cover;
+        background-position: bottom;
     }
 
     .rightAppContainer {
         width: 70%;
         height: 100%;
 
-        padding: 50px 55px 20px 70px;
+        padding: 50px 55px 0px 70px;
+    }
+
+    .title {
+        color: var(--marine-blue);
+    }
+
+    .stepDescription {
+        font-size: var(--font-size-paragraph);
+        color: var(--Cool-gray);
+        margin: 7px 0px 30px 0px;
+        /* background-color: red; */
     }
 
     .stepContainer {
         height: 85%;
 
-        background-color: green;
+        /* background-color: green; */
     }
 
+    /* INICIO NAVIGATION */
     .navigationContainer{
         height: 15%;
-
-        background-color: blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: blue; */
     }
+
+    .nextBtn {
+        padding: 13px 19px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--marine-blue);
+    }
+
+    .backBtn {
+        text-decoration: none;
+        color: var(--Cool-gray);
+        font-weight: 700;
+    }
+
+    .backBtn:hover {
+        color: var(--marine-blue);
+    }
+
+    .link .nextBtn {
+        text-decoration: none;
+        color: var(--White);
+    }
+    /* FIM NAVIGATION */
 }
