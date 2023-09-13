@@ -21,10 +21,15 @@
     color: var(--marine-blue);
     font-weight: 700;
 }
+
 .planContainer .changeLink {
     text-decoration: underline;
     color: var(--Cool-gray);
     font-size: 13px;
+}
+
+.planContainer .changeLink:hover {
+    color: var(--Purplish-blue);
 }
 
 .addOnItem {

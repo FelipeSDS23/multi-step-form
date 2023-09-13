@@ -1,5 +1,5 @@
 // react
-import { useState, useRef } from 'react';
+import { useRef, useContext } from 'react';
 import { Link } from "react-router-dom";
 
 // estilos
@@ -9,18 +9,17 @@ import styles from "./Step2.module.css";
 import Sidebar from "../components/Sidebar";
 
 // imagens
-import arcadeIcon from "../assets/images/icon-arcade.svg"
-import advancedIcon from "../assets/images/icon-advanced.svg"
-import proIcon from "../assets/images/icon-pro.svg"
+import arcadeIcon from "../assets/images/icon-arcade.svg";
+import advancedIcon from "../assets/images/icon-advanced.svg";
+import proIcon from "../assets/images/icon-pro.svg";
 
-const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setLargeStorage, setCustomizableProfile}) => {
+//context
+import { PlanContext } from '../context/PlanContext';
 
-  // CONFIGURAÇÕES DE ERRO DE PREENCHIMENTO
-  const showHideErrorMsg = () => {
 
-  }
-  // FIM DAS CONFIGURAÇÕES DE ERRO DE PREENCHIMENTO
-  
+const Step2 = () => {
+
+  const { plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setLargeStorage, setCustomizableProfile } = useContext(PlanContext);
 
   //INICIO DAS CONFIGURAÇÕES DO PERIODO DO PLANO
   const inputCheckbox = useRef();
@@ -29,25 +28,25 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setL
 
   const changePlanPeriod = () => {
     if (inputCheckbox.current.checked) {
-      setPlanPeriod("Yearly")
-      setPlan((prev) => ({name: prev.name, price: prev.price * 10}))
-      monthlyDisplay.current.classList.add("disable")
-      yearlyDisplay.current.classList.add("active")
+      setPlanPeriod("Yearly");
+      setPlan((prev) => ({ name: prev.name, price: prev.price * 10 }));
+      monthlyDisplay.current.classList.add("disable");
+      yearlyDisplay.current.classList.add("active");
 
-      setOnlineService((prev) => ({active: false, value: 10}))
-      setLargeStorage((prev) => ({active: false, value: 20}))
-      setCustomizableProfile((prev) => ({active: false, value: 20}))
+      setOnlineService({ active: false, value: 10 });
+      setLargeStorage({ active: false, value: 20 });
+      setCustomizableProfile({ active: false, value: 20 });
     } else {
-      setPlanPeriod("Monthly")
-      setPlan((prev) => ({name: prev.name, price: prev.price / 10}))
-      monthlyDisplay.current.classList.add("active")
-      yearlyDisplay.current.classList.add("disable")
+      setPlanPeriod("Monthly");
+      setPlan((prev) => ({ name: prev.name, price: prev.price / 10 }));
+      monthlyDisplay.current.classList.add("active");
+      yearlyDisplay.current.classList.add("disable");
 
-      setOnlineService((prev) => ({active: false, value: 1}))
-      setLargeStorage((prev) => ({active: false, value: 2}))
-      setCustomizableProfile((prev) => ({active: false, value: 2}))
-    }
-  }
+      setOnlineService({ active: false, value: 1 });
+      setLargeStorage({ active: false, value: 2 });
+      setCustomizableProfile({ active: false, value: 2 });
+    };
+  };
   //FIM DAS CONFIGURAÇÕES DO PERIDO DO PLANO
 
   return (
@@ -59,44 +58,44 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setL
       <div className="rightAppContainer">
         <div className="stepContainer">
 
-
           <h1 className="title">Select your plan</h1>
           <p className="stepDescription">You have the option of monthly or yearly billing.</p>
 
           <div className={styles.planContainer}>
 
-            <button className={styles.plansCards} onClick={() => setPlan({name: "Arcade", price: (planPeriod === "Monthly" ? 9 : 90)})} style={plan.name === "Arcade" ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
+            <button className={styles.plansCards} onClick={() => setPlan({ name: "Arcade", price: (planPeriod === "Monthly" ? 9 : 90) })} style={plan.name === "Arcade" ? { border: "2px solid var(--Purplish-blue)" } : { border: "2px solid var(--Light-gray)" }}>
               <div>
                 <img src={arcadeIcon} alt="arcade" />
               </div>
               <div className={styles.planPriceContainer}>
                 <span className={styles.planName}>Arcade</span><br />
-                <span className={styles.planPrice}>$9/mo</span><br />
+                <span className={styles.planPrice}>{planPeriod === "Monthly" ? `+$9/mo` : `$90/yr`}</span><br />
                 <span className={planPeriod === "Yearly" ? styles.freeMonths : styles.hide}>2 months free</span>
               </div>
             </button>
 
-            <button className={styles.plansCards} onClick={() => setPlan({name: "Advanced", price: (planPeriod === "Monthly" ? 12 : 120)})} style={plan.name === "Advanced" ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
+            <button className={styles.plansCards} onClick={() => setPlan({ name: "Advanced", price: (planPeriod === "Monthly" ? 12 : 120) })} style={plan.name === "Advanced" ? { border: "2px solid var(--Purplish-blue)" } : { border: "2px solid var(--Light-gray)" }}>
               <div>
                 <img src={advancedIcon} alt="advanced" />
               </div>
               <div className={styles.planPriceContainer}>
                 <span className={styles.planName}>Advanced</span><br />
-                <span className={styles.planPrice}>$12/mo</span><br />
+                <span className={styles.planPrice}>{planPeriod === "Monthly" ? `+$12/mo` : `$120/yr`}</span><br />
                 <span className={planPeriod === "Yearly" ? styles.freeMonths : styles.hide}>2 months free</span>
               </div>
             </button>
-            
-            <button className={styles.plansCards} onClick={() => setPlan({name: "Pro", price: (planPeriod === "Monthly" ? 15 : 150)})} style={plan.name === "Pro" ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
+
+            <button className={styles.plansCards} onClick={() => setPlan({ name: "Pro", price: (planPeriod === "Monthly" ? 15 : 150) })} style={plan.name === "Pro" ? { border: "2px solid var(--Purplish-blue)" } : { border: "2px solid var(--Light-gray)" }}>
               <div>
                 <img src={proIcon} alt="pro" />
               </div>
               <div className={styles.planPriceContainer}>
                 <span className={styles.planName}>Pro</span><br />
-                <span className={styles.planPrice}>$15/mo</span><br />
+                <span className={styles.planPrice}>{planPeriod === "Monthly" ? `+$15/mo` : `$150/yr`}</span><br />
                 <span className={planPeriod === "Yearly" ? styles.freeMonths : styles.hide}>2 months free</span>
               </div>
             </button>
+
           </div>
 
           <div className={styles.planPeriodContainer}>
@@ -105,7 +104,7 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setL
             {/* inicio button */}
             <div className={styles.buttonContainer}>
               <label>
-                <input type="checkbox" className={styles.toggleInput} onChange={changePlanPeriod} ref={inputCheckbox} checked={(planPeriod === "Yearly") ? true : false}/>
+                <input type="checkbox" className={styles.toggleInput} onChange={changePlanPeriod} ref={inputCheckbox} checked={(planPeriod === "Yearly") ? true : false} />
                 <div className={styles.slider}>
                   <button className={styles.button}>
 
@@ -121,35 +120,12 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setL
         </div>
         <nav className="navigationContainer">
           <Link className="link" to={'/'}><span className="backBtn">Go Back</span></Link>
-          <Link onClick={showHideErrorMsg} className="link" to={'/step3'}><button className="nextBtn">Next Step</button></Link>
+          <Link className="link" to={'/step3'}><button className="nextBtn">Next Step</button></Link>
         </nav>
       </div>
 
     </div>
-  )
-}
+  );
+};
 
 export default Step2;
-
-
-// <!-- Step 2 start -->
-
-// Select your plan
-// You have the option of monthly or yearly billing.
-
-// Arcade
-// $9/mo
-
-// Advanced
-// $12/mo
-
-// Pro
-// $15/mo
-
-// Monthly
-// Yearly
-
-// Go Back
-// Next Step
-
-// <!-- Step 2 end -->

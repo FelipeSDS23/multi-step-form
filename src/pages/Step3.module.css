@@ -34,14 +34,12 @@
     display: none;
 }
 
-/* INICIO CUSTOM CHECKBOX */
 .customCheckbox {
     background-color: var(--White);
     color: var(--Purplish-blue);
     height: 20px;
     width: 20px;
 }
-/* FIM CUSTOM CHECKBOX */
 
 .checkboxParagraphContainer p{
     margin-left: 20px;
