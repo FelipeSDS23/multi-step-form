@@ -123,6 +123,16 @@
         margin-right: 15px;
     }
 
+    .confirmBtn {
+        padding: 13px 19px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--Purplish-blue);
+        color: var(--White);
+        margin-right: 15px;
+    }
+
     .backBtn {
         text-decoration: none;
         color: var(--Cool-gray);
@@ -208,6 +218,15 @@
         border-radius: 5px;
         cursor: pointer;
         background-color: var(--marine-blue);
+    }
+
+    .confirmBtn {
+        padding: 13px 19px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--Purplish-blue);
+        color: var(--White);
     }
 
     .backBtn {

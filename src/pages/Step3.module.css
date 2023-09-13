@@ -1,0 +1,68 @@
+.addOnsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+
+.addOnsBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+    margin: 6px;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: var(--White);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.addOnsBtns:hover {
+    border: 2px solid var(--Purplish-blue);
+}
+
+.checkboxParagraphContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkboxParagraphContainer input {
+    display: none;
+}
+
+/* INICIO CUSTOM CHECKBOX */
+.customCheckbox {
+    background-color: var(--White);
+    color: var(--Purplish-blue);
+    height: 20px;
+    width: 20px;
+}
+/* FIM CUSTOM CHECKBOX */
+
+.checkboxParagraphContainer p{
+    margin-left: 20px;
+    color: var(--Cool-gray);
+    line-height: 18px;
+}
+
+.addOnName {
+    font-weight: 700;
+    color: var(--marine-blue);
+}
+
+.addOnPrice {
+    font-weight: 500;
+    color: var(--marine-blue);
+}
+
+/* inicio mobile */
+@media screen and (max-width: 849px) {
+    .addOnsBtns {
+        font-size: 13px;
+    }
+}
+/* fim mobile */

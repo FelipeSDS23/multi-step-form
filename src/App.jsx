@@ -29,6 +29,17 @@ function App() {
   const [planPeriod, setPlanPeriod] = useState("Monthly");
   //FIM STEP 2 DADOS
 
+  //INICIO STEP 3 DADOS
+  const [onlineService, setOnlineService] = useState({active: false, value: 1});
+  const [largeStorage, setLargeStorage] = useState({active: false, value: 2});
+  const [customizableProfile, setCustomizableProfile] = useState({active: false, value: 2}); 
+  console.log(onlineService, largeStorage, customizableProfile)
+  //FIM STEP 3 DADOS
+
+  const [totalValue, setTotalValue] = useState(0)
+  console.log(totalValue)
+
+
   return (
     <main className='App'>
       <BrowserRouter>
@@ -41,9 +52,24 @@ function App() {
           <Route path='/step2' element={<Step2
             plan={plan} setPlan={setPlan}
             planPeriod={planPeriod} setPlanPeriod={setPlanPeriod}
+            setOnlineService={setOnlineService}
+            setLargeStorage={setLargeStorage}
+            setCustomizableProfile={setCustomizableProfile}
           />} />
-          <Route path='/step3' element={<Step3 />} />
-          <Route path='/step4' element={<Step4 />} />
+          <Route path='/step3' element={<Step3 
+            onlineService={onlineService} setOnlineService={setOnlineService}
+            largeStorage={largeStorage} setLargeStorage={setLargeStorage}
+            customizableProfile={customizableProfile} setCustomizableProfile={setCustomizableProfile}
+            plan={plan}
+            setTotalValue={setTotalValue}
+          />} />
+          <Route path='/step4' element={<Step4
+            plan={plan}
+            planPeriod={planPeriod}
+            onlineService={onlineService}
+            largeStorage={largeStorage}
+            customizableProfile={customizableProfile}
+          />} />
           <Route path='/thanks' element={<Thanks />} />
         </Routes>
       </BrowserRouter>

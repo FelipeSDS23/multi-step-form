@@ -13,7 +13,7 @@ import arcadeIcon from "../assets/images/icon-arcade.svg"
 import advancedIcon from "../assets/images/icon-advanced.svg"
 import proIcon from "../assets/images/icon-pro.svg"
 
-const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod}) => {
+const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod, setOnlineService, setLargeStorage, setCustomizableProfile}) => {
 
   // CONFIGURAÇÕES DE ERRO DE PREENCHIMENTO
   const showHideErrorMsg = () => {
@@ -33,11 +33,19 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod}) => {
       setPlan((prev) => ({name: prev.name, price: prev.price * 10}))
       monthlyDisplay.current.classList.add("disable")
       yearlyDisplay.current.classList.add("active")
+
+      setOnlineService((prev) => ({active: false, value: 10}))
+      setLargeStorage((prev) => ({active: false, value: 20}))
+      setCustomizableProfile((prev) => ({active: false, value: 20}))
     } else {
       setPlanPeriod("Monthly")
       setPlan((prev) => ({name: prev.name, price: prev.price / 10}))
       monthlyDisplay.current.classList.add("active")
       yearlyDisplay.current.classList.add("disable")
+
+      setOnlineService((prev) => ({active: false, value: 1}))
+      setLargeStorage((prev) => ({active: false, value: 2}))
+      setCustomizableProfile((prev) => ({active: false, value: 2}))
     }
   }
   //FIM DAS CONFIGURAÇÕES DO PERIDO DO PLANO
@@ -56,6 +64,7 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod}) => {
           <p className="stepDescription">You have the option of monthly or yearly billing.</p>
 
           <div className={styles.planContainer}>
+
             <button className={styles.plansCards} onClick={() => setPlan({name: "Arcade", price: (planPeriod === "Monthly" ? 9 : 90)})} style={plan.name === "Arcade" ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
               <div>
                 <img src={arcadeIcon} alt="arcade" />
@@ -66,6 +75,7 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod}) => {
                 <span className={planPeriod === "Yearly" ? styles.freeMonths : styles.hide}>2 months free</span>
               </div>
             </button>
+
             <button className={styles.plansCards} onClick={() => setPlan({name: "Advanced", price: (planPeriod === "Monthly" ? 12 : 120)})} style={plan.name === "Advanced" ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
               <div>
                 <img src={advancedIcon} alt="advanced" />
@@ -76,6 +86,7 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod}) => {
                 <span className={planPeriod === "Yearly" ? styles.freeMonths : styles.hide}>2 months free</span>
               </div>
             </button>
+            
             <button className={styles.plansCards} onClick={() => setPlan({name: "Pro", price: (planPeriod === "Monthly" ? 15 : 150)})} style={plan.name === "Pro" ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
               <div>
                 <img src={proIcon} alt="pro" />
@@ -110,7 +121,7 @@ const Step2 = ({plan, setPlan, planPeriod, setPlanPeriod}) => {
         </div>
         <nav className="navigationContainer">
           <Link className="link" to={'/'}><span className="backBtn">Go Back</span></Link>
-          <Link onClick={showHideErrorMsg} className="link" to={(name && email && phone) ? '/step2' : '/'}><button className="nextBtn">Next Step</button></Link>
+          <Link onClick={showHideErrorMsg} className="link" to={'/step3'}><button className="nextBtn">Next Step</button></Link>
         </nav>
       </div>
 
