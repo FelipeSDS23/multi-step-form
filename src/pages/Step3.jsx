@@ -30,7 +30,7 @@ const Step3 = () => {
   return (
     <div className="appContainer">
       <div className="sidebarContainer">
-        <Sidebar />
+        <Sidebar step={"step3"} />
       </div>
 
       <div className="rightAppContainer">

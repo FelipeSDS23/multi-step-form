@@ -127,9 +127,12 @@
         justify-content: flex-start;
         align-items: center;
 
-        margin: 7px;
+        /* margin: 7px; */
         height: 78px;
         padding: 15px;
+
+        margin: 7px 22px;
+        max-width: 450px;
     }
 
     .planPriceContainer {

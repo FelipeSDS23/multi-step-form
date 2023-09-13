@@ -18,7 +18,7 @@ const Step4 = () => {
   return (
     <div className="appContainer">
       <div className="sidebarContainer">
-        <Sidebar />
+        <Sidebar step={"step4"} />
       </div>
 
       <div className="rightAppContainer">

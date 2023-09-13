@@ -61,6 +61,8 @@
 @media screen and (max-width: 849px) {
     .addOnsBtns {
         font-size: 13px;
+        margin: 6px auto;
+        max-width: 450px;
     }
 }
 /* fim mobile */

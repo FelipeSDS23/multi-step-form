@@ -52,7 +52,7 @@ const Step2 = () => {
   return (
     <div className="appContainer">
       <div className="sidebarContainer">
-        <Sidebar />
+        <Sidebar step={"step2"} />
       </div>
 
       <div className="rightAppContainer">

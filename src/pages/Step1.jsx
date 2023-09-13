@@ -31,7 +31,7 @@ const Step1 = () => {
   return (
     <div className="appContainer">
       <div className="sidebarContainer">
-        <Sidebar />
+        <Sidebar step={"step1"}/>
       </div>
 
       <div className="rightAppContainer">
