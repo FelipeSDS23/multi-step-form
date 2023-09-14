@@ -16,7 +16,7 @@ function App() {
     <main className='App'>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Step1 />} />
+          <Route path='/multi-step-form/' element={<Step1 />} />
           <Route path='/step2' element={<Step2 />} />
           <Route path='/step3' element={<Step3 />} />
           <Route path='/step4' element={<Step4 />} />
