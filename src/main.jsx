@@ -40,9 +40,9 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <PlanContextProvider>
-      <RouterProvider router={router}> 
-        <App />
-      </RouterProvider>
+      <RouterProvider router={router}/> 
+        {/* <App />
+      </RouterProvider> */}
     </PlanContextProvider>
   </React.StrictMode>,
 )
