@@ -2,7 +2,7 @@
 import './App.css';
 
 // react router
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
 import Step1 from './pages/Step1';
@@ -14,15 +14,15 @@ import Thanks from './pages/Thanks';
 function App() {
   return (
     <main className='App'>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Step1 />} />
+          <Route path='/multi-step-form' element={<Step1 />} />
           <Route path='/step2' element={<Step2 />} />
           <Route path='/step3' element={<Step3 />} />
           <Route path='/step4' element={<Step4 />} />
           <Route path='/thanks' element={<Thanks />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </main>
   );
 };
