@@ -33,7 +33,7 @@ const Step4 = () => {
               <div className={styles.planContainer}>
                 <p>
                   {plan.name} ({planPeriod})<br />
-                  <Link className={styles.changeLink} to={'/step2'}>Change</Link>
+                  <Link className={styles.changeLink} to={'/step2/multi-step-form'}>Change</Link>
                 </p>
                 <span>
                   {planPeriod === "Monthly" ? `$${plan.price}/mo` : `$${plan.price}/yr`}
@@ -65,8 +65,8 @@ const Step4 = () => {
 
         </div>
         <nav className="navigationContainer">
-          <Link className="link" to={'/step3'}><span className="backBtn">Go Back</span></Link>
-          <Link className="link" to={'/thanks'}><button className="confirmBtn">Confirm</button></Link>
+          <Link className="link" to={'/step3/multi-step-form'}><span className="backBtn">Go Back</span></Link>
+          <Link className="link" to={'/thanks/multi-step-form'}><button className="confirmBtn">Confirm</button></Link>
         </nav>
       </div>
 

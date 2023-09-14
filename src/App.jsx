@@ -17,10 +17,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/multi-step-form' element={<Step1 />} />
-          <Route path='/step2' element={<Step2 />} />
-          <Route path='/step3' element={<Step3 />} />
-          <Route path='/step4' element={<Step4 />} />
-          <Route path='/thanks' element={<Thanks />} />
+          <Route path='/step2/multi-step-form' element={<Step2 />} />
+          <Route path='/step3/multi-step-form' element={<Step3 />} />
+          <Route path='/step4/multi-step-form' element={<Step4 />} />
+          <Route path='/thanks/multi-step-form' element={<Thanks />} />
         </Routes>
       </BrowserRouter>
     </main>

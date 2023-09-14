@@ -98,7 +98,7 @@ const Step1 = () => {
         </div>
         <nav className="navigationContainer">
           <div></div>
-          <Link onClick={showHideErrorMsg} className="link" to={(name && email && phone) ? '/step2' : '/'}><button className="nextBtn">Next Step</button></Link>
+          <Link onClick={showHideErrorMsg} className="link" to={(name && email && phone) ? '/step2/multi-step-form' : '/multi-step-form'}><button className="nextBtn">Next Step</button></Link>
         </nav>
       </div>
 

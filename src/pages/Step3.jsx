@@ -78,8 +78,8 @@ const Step3 = () => {
 
         </div>
         <nav className="navigationContainer">
-          <Link className="link" to={'/step2'}><span className="backBtn">Go Back</span></Link>
-          <Link className="link" to={'/step4'}><button className="nextBtn" onClick={calcTotalValue}>Next Step</button></Link>
+          <Link className="link" to={'/step2/multi-step-form'}><span className="backBtn">Go Back</span></Link>
+          <Link className="link" to={'/step4/multi-step-form'}><button className="nextBtn" onClick={calcTotalValue}>Next Step</button></Link>
         </nav>
       </div>
 
