@@ -119,8 +119,8 @@ const Step2 = () => {
 
         </div>
         <nav className="navigationContainer">
-          <Link className="link" to={'/multi-step-form'}><span className="backBtn">Go Back</span></Link>
-          <Link className="link" to={'/step3/multi-step-form'}><button className="nextBtn">Next Step</button></Link>
+          <Link className="link" to={'/'}><span className="backBtn">Go Back</span></Link>
+          <Link className="link" to={'/step3'}><button className="nextBtn">Next Step</button></Link>
         </nav>
       </div>
 
