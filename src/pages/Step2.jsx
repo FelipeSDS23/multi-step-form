@@ -63,7 +63,7 @@ const Step2 = () => {
 
           <div className={styles.planContainer}>
 
-            <button className={styles.plansCards} onClick={() => setPlan({ name: "Arcade", price: (planPeriod === "Monthly" ? 9 : 90) })} style={plan.name === "Arcade" ? { border: "2px solid var(--Purplish-blue)" } : { border: "2px solid var(--Light-gray)" }}>
+            <button className={plan.name === "Arcade" ? styles.planCardActived : styles.plansCards} onClick={() => setPlan({ name: "Arcade", price: (planPeriod === "Monthly" ? 9 : 90) })} >
               <div>
                 <img src={arcadeIcon} alt="arcade" />
               </div>
@@ -74,7 +74,7 @@ const Step2 = () => {
               </div>
             </button>
 
-            <button className={styles.plansCards} onClick={() => setPlan({ name: "Advanced", price: (planPeriod === "Monthly" ? 12 : 120) })} style={plan.name === "Advanced" ? { border: "2px solid var(--Purplish-blue)" } : { border: "2px solid var(--Light-gray)" }}>
+            <button className={plan.name === "Advanced" ? styles.planCardActived : styles.plansCards} onClick={() => setPlan({ name: "Advanced", price: (planPeriod === "Monthly" ? 12 : 120) })} >
               <div>
                 <img src={advancedIcon} alt="advanced" />
               </div>
@@ -85,7 +85,7 @@ const Step2 = () => {
               </div>
             </button>
 
-            <button className={styles.plansCards} onClick={() => setPlan({ name: "Pro", price: (planPeriod === "Monthly" ? 15 : 150) })} style={plan.name === "Pro" ? { border: "2px solid var(--Purplish-blue)" } : { border: "2px solid var(--Light-gray)" }}>
+            <button className={plan.name === "Pro" ? styles.planCardActived : styles.plansCards} onClick={() => setPlan({ name: "Pro", price: (planPeriod === "Monthly" ? 15 : 150) })} >
               <div>
                 <img src={proIcon} alt="pro" />
               </div>

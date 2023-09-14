@@ -41,7 +41,7 @@ const Step3 = () => {
 
           <div className={styles.addOnsContainer}>
 
-            <label className={styles.addOnsBtns} style={onlineService.active ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
+            <label className={onlineService.active ? styles.addOnBtnActived : styles.addOnsBtns} >
               <div className={styles.checkboxParagraphContainer}>
                 <input type="checkbox" onChange={() => setOnlineService((prev) => ({active: !prev.active, value: prev.value}))} />
                 {onlineService.active ? (<FaCheckSquare className={styles.customCheckbox}/>) : (<FaSquare className={styles.customCheckbox}/>)}
@@ -52,7 +52,7 @@ const Step3 = () => {
               </span>
             </label>
 
-            <label className={styles.addOnsBtns} style={largeStorage.active ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
+            <label className={largeStorage.active ? styles.addOnBtnActived : styles.addOnsBtns} >
               <div className={styles.checkboxParagraphContainer}>
                 <input type="checkbox" onChange={() => setLargeStorage((prev) => ({active: !prev.active, value: prev.value}))} />
                 {largeStorage.active ? (<FaCheckSquare className={styles.customCheckbox}/>) : (<FaSquare className={styles.customCheckbox}/>)}
@@ -63,7 +63,7 @@ const Step3 = () => {
               </span>
             </label>
 
-            <label className={styles.addOnsBtns} style={customizableProfile.active ? {border: "2px solid var(--Purplish-blue)"} : {border: "2px solid var(--Light-gray)"}}>
+            <label className={customizableProfile.active ? styles.addOnBtnActived : styles.addOnsBtns} >
               <div className={styles.checkboxParagraphContainer}>
                 <input type="checkbox" onChange={() => setCustomizableProfile((prev) => ({active: !prev.active, value: prev.value}))} />
                 {customizableProfile.active ? (<FaCheckSquare className={styles.customCheckbox}/>) : (<FaSquare className={styles.customCheckbox}/>)}

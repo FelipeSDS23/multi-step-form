@@ -20,11 +20,32 @@ const Step1 = () => {
   const nameErrorMsg = useRef();
   const emailErrorMsg = useRef();
   const phoneErrorMsg = useRef();
+  const nameInput = useRef();
+  const emailInput = useRef();
+  const phoneInput = useRef();
 
   const showHideErrorMsg = () => {
-    !name ? nameErrorMsg.current.style.display = "block" : nameErrorMsg.current.style.display = "none";
-    !email ? emailErrorMsg.current.style.display = "block" : emailErrorMsg.current.style.display = "none";
-    !phone ? phoneErrorMsg.current.style.display = "block" : phoneErrorMsg.current.style.display = "none";
+    if (!name) {
+      nameErrorMsg.current.style.display = "block";
+      nameInput.current.style.border = "1px solid var(--Strawberry-red)"
+    } else {
+      nameErrorMsg.current.style.display = "none";
+      nameInput.current.style.border = "1px solid var(--Light-gray)"
+    }
+    if (!email) {
+      emailErrorMsg.current.style.display = "block";
+      emailInput.current.style.border = "1px solid var(--Strawberry-red)"
+    } else {
+      emailErrorMsg.current.style.display = "none";
+      emailInput.current.style.border = "1px solid var(--Light-gray)"
+    }
+    if (!phone) {
+      phoneErrorMsg.current.style.display = "block";
+      phoneInput.current.style.border = "1px solid var(--Strawberry-red)"
+    } else {
+      phoneErrorMsg.current.style.display = "none";
+      phoneInput.current.style.border = "1px solid var(--Light-gray)"
+    }
   }
   // FIM DAS CONFIGURAÇÕES DE ERRO DE PREENCHIMENTO
 
@@ -48,7 +69,7 @@ const Step1 = () => {
                   <span>Name</span>
                   <span className={styles.errorMsg} ref={nameErrorMsg}>This field is required</span>
                 </div>
-                <input className={styles.input} type="text" name="name" id="name" placeholder="e.g. Stephen King" onChange={(e) => setName(e.target.value)} value={name} />
+                <input className={styles.input} ref={nameInput} type="text" name="name" id="name" placeholder="e.g. Stephen King" onChange={(e) => setName(e.target.value)} value={name} />
               </label>
             </div>
 
@@ -58,7 +79,7 @@ const Step1 = () => {
                   <span>Email Address</span>
                   <span className={styles.errorMsg} ref={emailErrorMsg}>This field is required</span>
                 </div>
-                <input className={styles.input} type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com" onChange={(e) => setEmail(e.target.value)} value={email} />
+                <input className={styles.input} ref={emailInput} type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com" onChange={(e) => setEmail(e.target.value)} value={email} />
               </label>
             </div>
 
@@ -68,7 +89,7 @@ const Step1 = () => {
                   <span>Phone Number</span>
                   <span className={styles.errorMsg} ref={phoneErrorMsg}>This field is required</span>
                 </div>
-                <input className={styles.input} type="text" name="phone" id="phone" placeholder="e.g. +1 234 567 890" onChange={(e) => setPhone(e.target.value)} value={phone} />
+                <input className={styles.input} ref={phoneInput} type="text" name="phone" id="phone" placeholder="e.g. +1 234 567 890" onChange={(e) => setPhone(e.target.value)} value={phone} />
               </label>
             </div>
 

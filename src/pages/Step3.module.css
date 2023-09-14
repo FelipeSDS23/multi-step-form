@@ -14,14 +14,29 @@
     padding: 15px;
     margin: 6px;
     border-radius: 10px;
-    border: 1px solid red;
+    border: 1px solid var(--Cool-gray);
     background-color: var(--White);
     cursor: pointer;
     font-size: 14px;
 }
 
+.addOnBtnActived {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+    margin: 6px;
+    border-radius: 10px;
+    border: 1px solid var(--Purplish-blue);
+    background-color: var(--Alabaster);
+    cursor: pointer;
+    font-size: 14px;
+}
+
 .addOnsBtns:hover {
-    border: 2px solid var(--Purplish-blue);
+    border: 1px solid var(--Purplish-blue);
 }
 
 .checkboxParagraphContainer {
@@ -54,12 +69,12 @@
 
 .addOnPrice {
     font-weight: 500;
-    color: var(--marine-blue);
+    color: var(--Purplish-blue);
 }
 
 /* inicio mobile */
 @media screen and (max-width: 849px) {
-    .addOnsBtns {
+    .addOnsBtns, .addOnBtnActived {
         font-size: 13px;
         margin: 6px auto;
         max-width: 450px;
