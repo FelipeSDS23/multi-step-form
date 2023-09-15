@@ -55,7 +55,6 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 10vh 0px;
     }
 
     .sidebarContainer {
@@ -93,7 +92,7 @@
         width: 93%;
         /* height: 55%;   */
         position: absolute;
-        top: 95px;
+        top: 14vh;
         left: 3.5%;
         padding: 20px; 
         border-radius: 15px;
