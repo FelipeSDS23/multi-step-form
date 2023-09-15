@@ -42,6 +42,14 @@
     text-decoration: none;
 }
 
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Magnolia);
+}
 
 /* inicio mobile */
 @media screen and (max-width: 849px) {
@@ -69,8 +77,8 @@
     }
 
     .rightAppContainer {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 80vh;
         background-color: var(--Magnolia);
     }
 
@@ -92,7 +100,7 @@
         width: 93%;
         /* height: 55%;   */
         position: absolute;
-        top: 95px;
+        top: 14%;
         left: 3.5%;
         padding: 20px; 
         border-radius: 15px;
