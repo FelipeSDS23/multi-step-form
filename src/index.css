@@ -210,6 +210,10 @@
         background-color: var(--marine-blue);
     }
 
+    .nextBtn:hover {
+        background-color: #022b7dd2;
+    }
+
     .confirmBtn {
         height: 40px;
         width: 90px;
@@ -218,6 +222,10 @@
         cursor: pointer;
         background-color: var(--Purplish-blue);
         color: var(--White);
+    }
+
+    .confirmBtn:hover {
+        background-color: #473dffaf;
     }
 
     .backBtn {
