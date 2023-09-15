@@ -75,9 +75,15 @@
 /* inicio mobile */
 @media screen and (max-width: 849px) {
     .addOnsBtns, .addOnBtnActived {
-        font-size: 13px;
-        margin: 6px auto;
-        max-width: 450px;
+        font-size: 14px;
+    }
+
+    .addOnName {
+        font-size: 16px;
+    }
+
+    .checkboxParagraphContainer p{
+        margin-left: 10px;
     }
 }
 /* fim mobile */
