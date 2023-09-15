@@ -50,7 +50,7 @@ const Step2 = () => {
   //FIM DAS CONFIGURAÇÕES DO PERIDO DO PLANO
 
   return (
-    <div className="appContainer">
+    <section className="appContainer">
       <div className="sidebarContainer">
         <Sidebar step={"step2"} />
       </div>
@@ -124,7 +124,7 @@ const Step2 = () => {
         </nav>
       </div>
 
-    </div>
+    </section>
   );
 };
 

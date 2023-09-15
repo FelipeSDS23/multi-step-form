@@ -16,7 +16,7 @@ const Step4 = () => {
   const { plan, planPeriod, onlineService, largeStorage, customizableProfile, totalValue } = useContext(PlanContext);
 
   return (
-    <div className="appContainer">
+    <section className="appContainer">
       <div className="sidebarContainer">
         <Sidebar step={"step4"} />
       </div>
@@ -70,7 +70,7 @@ const Step4 = () => {
         </nav>
       </div>
 
-    </div>
+    </section>
   );
 };
 

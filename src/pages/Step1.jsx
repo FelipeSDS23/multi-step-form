@@ -62,7 +62,7 @@ const Step1 = () => {
   // FIM DAS CONFIGURAÇÕES DE ERRO DE PREENCHIMENTO
 
   return (
-    <div className="appContainer">
+    <section className="appContainer">
       <div className="sidebarContainer">
         <Sidebar step={"step1"}/>
       </div>
@@ -115,7 +115,7 @@ const Step1 = () => {
         </nav>
       </div>
 
-    </div>
+    </section>
   );
 };
 

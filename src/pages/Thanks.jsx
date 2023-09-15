@@ -9,7 +9,7 @@ import finishIcon from "../assets/images/icon-thank-you.svg";
 
 const Thanks = () => {
   return (
-    <div className="appContainer">
+    <section className="appContainer">
       <div className="sidebarContainer">
         <Sidebar step={"step4"} />
       </div>
@@ -31,7 +31,7 @@ const Thanks = () => {
         </div>
       </div>
 
-    </div>
+    </section>
   );
 };
 

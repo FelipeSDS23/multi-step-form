@@ -28,7 +28,7 @@ const Step3 = () => {
   }
 
   return (
-    <div className="appContainer">
+    <section className="appContainer">
       <div className="sidebarContainer">
         <Sidebar step={"step3"} />
       </div>
@@ -83,7 +83,7 @@ const Step3 = () => {
         </nav>
       </div>
 
-    </div>
+    </section>
   );
 };
 
