@@ -168,7 +168,6 @@
         width: 30%;
         height: 100%;
         border-radius: 10px;
-
         background: url(assets/images/bg-sidebar-desktop.svg);
         background-size: cover;
         background-position: bottom;
@@ -177,7 +176,6 @@
     .rightAppContainer {
         width: 70%;
         height: 100%;
-
         padding: 50px 55px 0px 70px;
     }
 
@@ -189,13 +187,10 @@
         font-size: var(--font-size-paragraph);
         color: var(--Cool-gray);
         margin: 7px 0px 30px 0px;
-        /* background-color: red; */
     }
 
     .stepContainer {
         height: 85%;
-
-        /* background-color: green; */
     }
 
     /* INICIO NAVIGATION */
@@ -204,11 +199,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* background-color: blue; */
     }
 
     .nextBtn {
-        /* padding: 13px 19px; */
         height: 40px;
         width: 90px;
         border: none;
@@ -218,7 +211,6 @@
     }
 
     .confirmBtn {
-        /* padding: 13px 19px; */
         height: 40px;
         width: 90px;
         border: none;
