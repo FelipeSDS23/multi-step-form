@@ -63,7 +63,6 @@
         height: 25%;
         position: absolute;
         top: 0;
-
         background: url(assets/images/bg-sidebar-mobile.svg);
         background-size: cover;
         background-position: bottom;
@@ -83,15 +82,10 @@
         font-size: var(--font-size-paragraph);
         color: var(--Cool-gray);
         margin: 7px 0px 30px 0px;
-
-        /* width: 240px;
-        line-height: 23px; */
-        /* background-color: red; */
     }
 
     .stepContainer {
         width: 93%;
-        /* height: 55%;   */
         position: absolute;
         top: 14vh;
         left: 3.5%;
@@ -107,18 +101,15 @@
         height: 11%;
         position: absolute;
         bottom: 0;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         background-color: var(--White);
     }
 
     .nextBtn {
         height: 40px;
         width: 90px;
-        /* padding: 13px 19px; */
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -129,7 +120,6 @@
     .confirmBtn {
         height: 40px;
         width: 90px;
-        /* padding: 13px 19px; */
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -219,8 +209,8 @@
 
     .nextBtn {
         /* padding: 13px 19px; */
-        height: 40px;
-        width: 90px;
+        height: 50px;
+        width: 100px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -229,8 +219,8 @@
 
     .confirmBtn {
         /* padding: 13px 19px; */
-        height: 40px;
-        width: 90px;
+        height: 50px;
+        width: 100px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
