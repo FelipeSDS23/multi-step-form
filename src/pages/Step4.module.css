@@ -36,12 +36,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 16px;
+    padding-top: 15px;
 }
 
 .addOnName {
     color: var(--Cool-gray);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .addOnItem .addOnPrice {
