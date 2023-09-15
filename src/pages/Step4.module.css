@@ -62,3 +62,17 @@
     color: var(--Purplish-blue);
     font-size: 17px;
 }
+
+/* inicio mobile */
+@media screen and (max-width: 849px) {
+    .planContainer p {
+        font-size: 16px;
+    }
+
+    .addOnName {
+        color: var(--Cool-gray);
+        font-size: 14px;
+    }
+
+}
+/* fim mobile */
