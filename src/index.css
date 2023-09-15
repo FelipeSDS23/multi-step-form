@@ -48,7 +48,7 @@
     /* container dos steps */
     .appContainer {
         width: 100vw;
-        height: 100vh;
+        height: 100svh;
         background-color: var(--White);
         display: flex;
         flex-direction: column;
